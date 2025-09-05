@@ -2,6 +2,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { Vortex } from "./components/Vortex";
 import AboutMe from "./components/AboutMe";
+import Specialty from "./components/Project";
+
 
 export default function App() {
   return (
@@ -28,6 +30,9 @@ export default function App() {
 
       {/* Seção Sobre Mim */}
       <AboutMe />
+      {/* Specialty */}
+      <Specialty />
+    
     </div>
   );
 }

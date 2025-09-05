@@ -7,8 +7,8 @@
       <main className="flex items-center justify-center h-screen text-white">
         <div className="text-center">
           {/* Texto de apresentação */}
-          <p className="text-sm font-subtittle text(length:--font-size-hero-subtittle) md:text-lg font-syncopate pb-3 ">Opa! Meu nome é</p>
-        <h1 className="text-6xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-syncopate"> Fidelis</h1>
+          <p className="text-xs font-subtittle text(length:--font-size-hero-subtittle) md:text-lg font-syncopate pb-3 ">Opa! Bem-vindo ao meu </p>
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-syncopate pt-3"> PORTIFÓLIO </h1>
 
         {/* Ícones de redes sociais */}
           <div className="flex justify-center gap-6 mt-6 text-2xl">
