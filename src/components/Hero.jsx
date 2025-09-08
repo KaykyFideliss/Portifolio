@@ -1,13 +1,14 @@
   import { FaLinkedin, FaInstagram } from "react-icons/fa";
   import { FiGithub } from "react-icons/fi";
   import { AiOutlineLinkedin } from "react-icons/ai";
+  import ScrollAnimation from './ScrollAnimation';
 
   const Hero = () => {
     return (
       <main className="flex items-center justify-center h-screen text-white">
         <div className="text-center">
           {/* Texto de apresentação */}
-          <p className="text-xs font-subtittle text(length:--font-size-hero-subtittle) md:text-lg font-syncopate pb-3 ">Opa! Bem-vindo ao meu </p>
+          <ScrollAnimation direction="up" className="text-xs font-subtittle text(length:--font-size-hero-subtittle) md:text-lg font-syncopate pb-3 ">Opa! Bem-vindo ao meu </ScrollAnimation>
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-syncopate pt-3"> PORTIFÓLIO </h1>
 
         {/* Ícones de redes sociais */}

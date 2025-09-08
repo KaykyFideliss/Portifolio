@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import { Vortex } from "./components/Vortex";
 import AboutMe from "./components/AboutMe";
 import Project from "./components/Project";
+import Stacks from "./components/Stacks";
 
 
 export default function App() {
@@ -34,6 +35,10 @@ export default function App() {
     {/* project */}
     <Project />
     
+    {/* My Stacks */}
+    <Stacks />
+
+
     </div>
   );
 }

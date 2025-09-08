@@ -1,13 +1,24 @@
-
 import { FaLaptopCode, FaReact } from "react-icons/fa"; //laptop icon
 import { PiCertificateBold } from "react-icons/pi"; //certificate icon
 import { FaLink } from "react-icons/fa6"; //link icon
 import { GoArrowRight } from "react-icons/go"; //seta icon
 import { useState } from "react";//usestate
-
+import {motion} from "framer-motion"
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("projects");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
+  const openModal = (cert) => {
+    setSelectedCertificate(cert);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedCertificate(null);
+    setModalOpen(false);
+  };
 
   const tabs = [
     {
@@ -20,19 +31,13 @@ const Tabs = () => {
       label: "Certificates",
       icon: <PiCertificateBold className="text-2xl mb-2" />,
     },
-    {
-      id: "techstack",
-      label: "Tech Stack",
-      icon: <FaReact className="text-2xl mb-2" />,
-    },
-    
   ];
+
   const projects = [
     {
       id: 1,
       title: "Aritmatika Solver",
-      description:
-        "Program ini dirancang untuk mempermudah pengguna dalam menyelesaikan soal-soal Aritmatika secara…",
+      description: "Program ini dirancang untuk mempermudah pengguna dalam menyelesaikan soal-soal Aritmatika secara…",
       image: "src/image/funec-adventure.png",
       demoUrl: "https://seu-link-demo.com",
       detailsUrl: "https://seu-link-detalhes.com",
@@ -51,7 +56,7 @@ const Tabs = () => {
       description: "Aplicativo web para criar e gerenciar anotações rapidamente.",
       image: "src/image/project-acqualife-photo.png",
       demoUrl: "#",
-      detailsUrl: "#",
+      detailsUrl: "https://www.youtube.com/watch?v=QDwPYaqbmRQ",
     },
     {
       id: 4,
@@ -63,10 +68,14 @@ const Tabs = () => {
     },
   ];
 
+  const certificates = [
+    "src/image/certificated/Certificado-front.jpg",
+    "src/image/certificated/administrando-BD.jpg",
+    "src/image/certificated/certificado-python.jpg",
+  ];
 
   return (
-    <section className="relative bg-white  w-full min-h-screen overflow-hidden px-4 sm:px-6 lg:px-8 py-12">
-     
+    <section className="relative bg-white w-full min-h-screen overflow-hidden px-4 sm:px-6 lg:px-8 py-12">
       <div className="w-full">
         {/* Título centralizado */}
         <div className="text-center mb-12">
@@ -85,10 +94,11 @@ const Tabs = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex flex-col items-center justify-center w-40 py-4 rounded-xl font-semibold transition ${activeTab === tab.id
-                    ? "text-white bg-[#00aaff] shadow-md"
-                    : "text-gray-500 hover:text-black hover:bg-gray-200"
-                  }`}
+                className={`flex flex-col items-center justify-center w-40 py-4 rounded-xl font-semibold transition ${
+                  activeTab === tab.id
+                    ? "text-white bg-[#00aaff] shadow-md w-96"
+                    : "text-gray-500 hover:text-black hover:bg-gray-200 w-96"
+                }`}
               >
                 {tab.icon}
                 <span>{tab.label}</span>
@@ -99,24 +109,19 @@ const Tabs = () => {
 
         {/* Conteúdo das tabs */}
         <div className="max-w-6xl mx-auto">
+          {/* Projects Tab */}
           {activeTab === "projects" && (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((project) => (
-                <div
-                  key={project.id}
-                  className="group relative rounded-2xl p-[1px]  transition-all duration-500"
-                >
+                <div key={project.id} className="group relative rounded-2xl p-[1px] transition-all duration-500">
                   <div className="rounded-2xl bg-[#0e0e0e] h-full flex flex-col transform group-hover:scale-105 transition-transform duration-300 shadow-black">
                     <div className="p-4">
-                      {/* Imagem */}
                       <img
                         src={project.image}
                         alt={project.title}
                         className="rounded-xl w-full h-40 object-cover"
                       />
                     </div>
-
-                    {/* Conteúdo */}
                     <div className="flex flex-col flex-grow p-4">
                       <h3 className="text-lg font-bold text-white mb-2 font-syncopate">
                         {project.title}
@@ -124,8 +129,6 @@ const Tabs = () => {
                       <p className="text-xs text-white font-poppins flex-grow">
                         {project.description}
                       </p>
-
-                      {/* Botões */}
                       <div className="flex justify-between items-center mt-4">
                         <a
                           href={project.demoUrl}
@@ -133,14 +136,19 @@ const Tabs = () => {
                           rel="noopener noreferrer"
                           className="text-[#00ccff] text-sm font-poppins hover:underline flex items-center gap-1 "
                         >
-                          Live Demo <span><FaLink /></span>
+                          Live Demo <FaLink />
                         </a>
-                        <a
+                       <motion.a
+
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          onHoverStart={() => console.log('hover started!')}
+
                           href={project.detailsUrl}
                           className=" flex bg-[#00ccff] hover:bg-[#009dc4] text-sm text-white font-poppins px-4 py-2 rounded-lg transition"
                         >
-                          Details <span className="items-center flex pl-1"><GoArrowRight /></span>
-                        </a>
+                          Details <GoArrowRight className="pl-1" />
+                        </motion.a>
                       </div>
                     </div>
                   </div>
@@ -149,19 +157,47 @@ const Tabs = () => {
             </div>
           )}
 
-
+          {/* Certificates Tab */}
           {activeTab === "certificates" && (
-            <div className="text-center text-gray-700">
-              <p>Meus certificados </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certificates.map((cert, index) => (
+                <div key={index} className="cursor-pointer overflow-hidden rounded-lg shadow-lg border  w-full" onClick={() => openModal(cert)}>
+                  <img
+                    src={cert}
+                    alt={`Certificado ${index + 1}`}
+                    className="w-full h-[300px] object-cover transform hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
             </div>
           )}
 
-          {activeTab === "techstack" && (
-            <div className="text-center text-gray-700">
-              <p>Habilidades</p>
-            </div>
-          )}
         </div>
+
+        {/* Modal do Certificado */}
+        {modalOpen && selectedCertificate && (
+          <div
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            onClick={closeModal}
+          >
+            <div
+              className="relative max-w-3xl w-full animate-fadeIn"
+              onClick={(e) => e.stopPropagation()} // impede fechar ao clicar na imagem
+            >
+              <img
+                src={selectedCertificate}
+                alt="Certificado"
+                className="rounded-lg w-full h-auto shadow-2xl"
+              />
+              <button
+                className="absolute -top-2 right-2 text-[#ffffff] text-3xl font-bold hover:text-[#ff0000] transition"
+                onClick={closeModal}
+              >
+                ×
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

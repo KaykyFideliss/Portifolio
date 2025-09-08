@@ -1,15 +1,15 @@
+import ScrollAnimation from './ScrollAnimation';
+
 const AboutMe = () => {
   return (
-    <section
-      id="about"
-      className="flex w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-transparent" >
+    <section id="about"className="flex w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-transparent" >
       <div className="w-full">
-        {/* Título centralizado */}
-        <div className="text-center mb-12">
+        {/* Título centralizado Motion: vindo de cima  */}
+        <ScrollAnimation direction="up" className="text-center mb-12">
           <h2 className="text-5xl font-bold text-[#FFFFff] font-syncopate">
             SOBRE MIM
           </h2>
-        </div>
+        </ScrollAnimation>
 
         {/* Container com texto e foto lado a lado */}
       <div className="flex flex-col lg:flex-row items-center gap-y-6 lg:gap-x-8 text-black p-8 rounded-2xl shadow-lg ">
