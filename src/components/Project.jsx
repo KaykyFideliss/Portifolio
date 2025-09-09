@@ -56,15 +56,15 @@ const Tabs = () => {
       description: "Aplicativo web para criar e gerenciar anotações rapidamente.",
       image: "src/image/project-acqualife-photo.png",
       demoUrl: "#",
-      detailsUrl: "https://www.youtube.com/watch?v=QDwPYaqbmRQ",
+      detailsUrl: "/funec-adventure",
     },
     {
       id: 4,
       title: "Teste",
       description: "Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste",
       image: "https://cdn1.gnarususercontent.com.br/1/906750/ca4a19d0-b044-4307-a2c2-e8adf65ad9d4.png",
-      demoUrl: "#",
-      detailsUrl: "#",
+      demoUrl: "/funec-adventure",
+      detailsUrl: "/funec-adventure",
     },
   ];
 
