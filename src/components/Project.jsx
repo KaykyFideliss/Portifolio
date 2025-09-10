@@ -38,15 +38,15 @@ const Tabs = () => {
       id: 1,
       title: "Aritmatika Solver",
       description: "Program ini dirancang untuk mempermudah pengguna dalam menyelesaikan soal-soal Aritmatika secara…",
-      image: "src/image/funec-adventure.png",
-      demoUrl: "https://seu-link-demo.com",
-      detailsUrl: "https://seu-link-detalhes.com",
+      image: "/image/funec-adventure.png",
+      demoUrl: "",
+      detailsUrl: "/funec-adventure",
     },
     {
       id: 2,
       title: "ENVIRONMENTAL DISASTER",
       description: "Automatiza mensagens em canais do Discord de forma agendada.",
-      image: "src/image/project-E.I-photo.png",
+      image: "/image/project-E.I-photo.png",
       demoUrl: "#",
       detailsUrl: "#",
     },
@@ -54,7 +54,7 @@ const Tabs = () => {
       id: 3,
       title: "Buku Catatan",
       description: "Aplicativo web para criar e gerenciar anotações rapidamente.",
-      image: "src/image/project-acqualife-photo.png",
+      image: "/image/project-acqualife-photo.png",
       demoUrl: "#",
       detailsUrl: "/funec-adventure",
     },
@@ -69,9 +69,9 @@ const Tabs = () => {
   ];
 
   const certificates = [
-    "src/image/certificated/Certificado-front.jpg",
-    "src/image/certificated/administrando-BD.jpg",
-    "src/image/certificated/certificado-python.jpg",
+    "/image/certificated/Certificado-front.jpg",
+    "/image/certificated/administrando-BD.jpg",
+    "/image/certificated/certificado-python.jpg",
   ];
 
   return (
