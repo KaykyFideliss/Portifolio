@@ -4,6 +4,7 @@ import { FaLink } from "react-icons/fa6"; //link icon
 import { GoArrowRight } from "react-icons/go"; //seta icon
 import { useState } from "react";//usestate
 import {motion} from "framer-motion"
+import { Particles } from "./Particles";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("projects");
@@ -36,8 +37,8 @@ const Tabs = () => {
   const projects = [
     {
       id: 1,
-      title: "Aritmatika Solver",
-      description: "Program ini dirancang untuk mempermudah pengguna dalam menyelesaikan soal-soal Aritmatika secara…",
+      title: "Funec Riacho Adventure",
+      description: "O Funec Riacho Adventure é um jogo digital inovador que combina aprendizado e diversão...",
       image: "/image/funec-adventure.png",
       demoUrl: "",
       detailsUrl: "/funec-adventure",
@@ -52,7 +53,7 @@ const Tabs = () => {
     },
     {
       id: 3,
-      title: "Buku Catatan",
+      title: "Acqualife",
       description: "Aplicativo web para criar e gerenciar anotações rapidamente.",
       image: "/image/project-acqualife-photo.png",
       demoUrl: "#",
@@ -60,7 +61,7 @@ const Tabs = () => {
     },
     {
       id: 4,
-      title: "Teste",
+      title: "EcoAlert",
       description: "Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste",
       image: "https://cdn1.gnarususercontent.com.br/1/906750/ca4a19d0-b044-4307-a2c2-e8adf65ad9d4.png",
       demoUrl: "/funec-adventure",
@@ -76,20 +77,29 @@ const Tabs = () => {
 
   return (
     <section className="relative bg-white w-full min-h-screen overflow-hidden px-4 sm:px-6 lg:px-8 py-12">
-      <div className="w-full">
+        {/* Particles de fundo */}
+  <Particles
+    className="absolute top-0 left-0 w-full h-full z-0 "
+    quantity={100}
+    color="#00ccff"
+    size={0.5}
+    staticity={50}
+    ease={50}
+  />
+      <div className="w-full z-10">
         {/* Título centralizado */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 z-10">
           <h2 className="text-5xl font-bold text-[#000000] font-syncopate">
             SOBRE MIM
           </h2>
           <p className="text-1xl text-black font-poppins p-2xl">
-            eeeeeeeeeeeeeeeeee
+            Explore minha jornada por projetos, certificações e expertise técnica. Cada seção representa um marco na minha jornada de aprendizado contínuo.
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="bg-black p-2 rounded-xl mb-12 max-w-6xl mx-auto">
-          <div className="flex items-center justify-around">
+        <div className="bg-black p-2 rounded-xl mb-12 max-w-6xl mx-auto ">
+          <div className="flex items-center justify-around z-10">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -123,7 +133,7 @@ const Tabs = () => {
                       />
                     </div>
                     <div className="flex flex-col flex-grow p-4">
-                      <h3 className="text-lg font-bold text-white mb-2 font-syncopate">
+                      <h3 className="text-base font-bold text-white mb-2 font-syncopate">
                         {project.title}
                       </h3>
                       <p className="text-xs text-white font-poppins flex-grow">
