@@ -11,7 +11,7 @@ const ProjectDetail = () => {
         <Particles
     className="absolute top-0 left-0 w-full h-full "
     quantity={100}
-    color="#00ccff"
+    color="#0077ff"
     size={0.5}
     staticity={50}
     ease={50}

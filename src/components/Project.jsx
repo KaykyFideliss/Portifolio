@@ -49,7 +49,7 @@ const Tabs = () => {
       description: "Automatiza mensagens em canais do Discord de forma agendada.",
       image: "/image/project-E.I-photo.png",
       demoUrl: "#",
-      detailsUrl: "#",
+      detailsUrl: "/Environmental-Disaster",
     },
     {
       id: 3,
@@ -90,7 +90,7 @@ const Tabs = () => {
         {/* Título centralizado */}
         <div className="text-center mb-12 z-10">
           <h2 className="text-5xl font-bold text-[#000000] font-syncopate">
-            SOBRE MIM
+            Meus projetos
           </h2>
           <p className="text-1xl text-black font-poppins p-2xl">
             Explore minha jornada por projetos, certificações e expertise técnica. Cada seção representa um marco na minha jornada de aprendizado contínuo.
