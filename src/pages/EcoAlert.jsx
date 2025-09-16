@@ -7,6 +7,9 @@ import { useState } from "react"; // <-- Move para dentro
 import { IoLogoCss3, IoMdClose } from "react-icons/io";
 import { FaHtml5, FaJs, FaBootstrap } from "react-icons/fa";
 import { SiScrollreveal } from "react-icons/si";
+
+
+import { SiArduino } from "react-icons/si";
 // import Function from "../components/Function";
 
 const ProjectDetail = () => {
@@ -37,27 +40,22 @@ const ProjectDetail = () => {
             Projetos <HiChevronRight />
           </span>
           <span className="font-poppins text-sm text-white whitespace-nowrap sm:text-sm">
-            Environmenltal Disaster
+            EcoAlert
           </span>
         </nav>
 
         {/* Título e texto */}
         <div className="flex flex-col gap-6 text-center md:text-left">
           <h1 className="text-4xl font-bold text-white font-poppins">
-            Environmenltal Disaster
+            EcoAlert
           </h1>
           <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
-            O projeto busca promover a conscientização sobre os impactos cada vez mais intensos e frequentes dos desastres naturais e ambientais. Além de destacar suas consequências imediatas — como destruição de infraestrutura, degradação ambiental e riscos à saúde pública — também incentiva práticas sustentáveis e estratégias de mitigação, capacitando indivíduos e comunidades a reduzir danos e contribuir para a recuperação dos ecossistemas.
+           Projeto desenvolvido no âmbito do PIBIC (Programa Institucional de Bolsas de Iniciação Científica), onde criei um sistema automatizado com Arduino para monitoramento ambiental.
           </p>
            <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
-        Neste projeto fui responsável por grande parte do desenvolvimento. Entre as entregas, destaco a criação da página Home, desde o design no Figma até a implementação em código. <br />  Além disso, também contribuí em outras áreas, como:</p>
-           <ul className="flex gap-10 justify-center font-poppins list-disc">
-            <li>Quiz Game</li>
-            <li>Mapa</li>
-            <li>Sobre</li>
-            <li>Video-aula</li>
-           </ul>
-          
+            O protótipo realiza a medição de temperatura, níveis de CO₂ e luminosidade, além de detectar gases tóxicos, inflamáveis e fumaça. Em situações de risco, o sistema aciona um alarme sonoro e envia notificações por SMS via módulo GSM, além de exibir os dados em um display LCD.</p>
+            
+            <p>A aplicação é voltada para residências, empresas e escolas, promovendo tanto a segurança preventiva quanto a educação ambiental.</p>
         </div>
 
         {/* Vídeo normal */}
@@ -74,7 +72,7 @@ const ProjectDetail = () => {
               onClick={() => setIsOpen(true)}
               className="rounded-xl shadow-lg w-full max-w-2xl cursor-pointer"
             >
-              <source src="/video/E.D-video.mp4" type="video/mp4" />
+              <source src="" type="video/mp4" />
               Seu navegador não suporta vídeo.
             </video>
 
