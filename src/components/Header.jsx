@@ -36,9 +36,9 @@ const Header = () => {
       {open && (
         <div className="absolute top-0 left-0 w-full h-screen bg-[#000000] flex flex-col items-center justify-center gap-10 text-xl z-40">
           <a onClick={() => setOpen(false)} className="hover:text-[#00aaff] font-poppins" href="#home">Home</a>
-          <a href="#sobre" className="hover:text-[#00aaff] font-poppins" onClick={(e) => { e.preventDefault();document.getElementById("about").scrollIntoView({ behavior: "smooth" });setOpen(false); }}>Sobre</a>
-          <a onClick={() => setOpen(false)} className="hover:text-[#00aaff] font-poppins" href="#project">Projetos e certificados</a>
-          <a onClick={() => setOpen(false)} className="hover:text-[#00aaff] font-poppins" href="#contato">Contato</a>
+          <a href="#project" onClick={(e) => { e.preventDefault();document.getElementById("about").scrollIntoView({ behavior: "smooth" });setOpen(false); }}>Sobre</a>
+          <a onClick={(e) => { e.preventDefault();document.getElementById("project").scrollIntoView({ behavior: "smooth" });setOpen(false); }} className="hover:text-[#00aaff] font-poppins" href="#project">Projetos e certificados</a>
+          <a onClick={(e) => { e.preventDefault();document.getElementById("project").scrollIntoView({ behavior: "smooth" });setOpen(false); }} className="hover:text-[#00aaff] font-poppins" href="#contact">Contato</a>
         </div>
       )}
     </header>

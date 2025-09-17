@@ -93,7 +93,7 @@ const Tabs = () => {
   ];
 
   return (
-    <section className="relative bg-white w-full min-h-screen overflow-hidden px-4 sm:px-6 lg:px-8 py-12">
+    <section id="project" className="relative bg-white w-full min-h-screen overflow-hidden px-4 sm:px-6 lg:px-8 py-12">
         {/* Particles de fundo */}
   <Particles
     className="absolute top-0 left-0 w-full h-full z-0 "
@@ -103,10 +103,10 @@ const Tabs = () => {
     staticity={50}
     ease={50}
   />
-      <div className="w-full z-10">
+      <div className="w-full z-10 " >
         {/* Título centralizado */}
         <div className="text-center mb-12 z-10">
-          <h2 className="text-5xl font-bold text-[#000000] font-syncopate">
+          <h2  className="text-5xl font-bold text-[#000000] font-syncopate">
             Meus projetos
           </h2>
           <p className="text-1xl text-black font-poppins p-2xl">
