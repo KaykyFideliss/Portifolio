@@ -5,7 +5,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="flex justify-between items-center py-4 px-4 lg:px-20">
+   <header className="fixed flex justify-between top-0 left-0 w-full h-16 stify-center items-center bg-black z-50">
       {/* Logo ou Nome */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
        
@@ -19,7 +19,6 @@ const Header = () => {
         Sobre
         </a>
         <a className="text-base tracking-wider transition-colors hover:text-[#00aaff] font-poppins" href="#project">Projetos e certificados </a>
-        <a className="text-base tracking-wider transition-colors hover:text-[#00aaff] font-poppins" href="#contato">Contato</a>
       </div>
 
       <div></div>
@@ -38,7 +37,6 @@ const Header = () => {
           <a onClick={() => setOpen(false)} className="hover:text-[#00aaff] font-poppins" href="#home">Home</a>
           <a href="#project" onClick={(e) => { e.preventDefault();document.getElementById("about").scrollIntoView({ behavior: "smooth" });setOpen(false); }}>Sobre</a>
           <a onClick={(e) => { e.preventDefault();document.getElementById("project").scrollIntoView({ behavior: "smooth" });setOpen(false); }} className="hover:text-[#00aaff] font-poppins" href="#project">Projetos e certificados</a>
-          <a onClick={(e) => { e.preventDefault();document.getElementById("project").scrollIntoView({ behavior: "smooth" });setOpen(false); }} className="hover:text-[#00aaff] font-poppins" href="#contact">Contato</a>
         </div>
       )}
     </header>
