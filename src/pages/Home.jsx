@@ -6,6 +6,8 @@ import Header from "../components/Header";
  import Stacks from "../components/Stacks";
  import Footer from "../components/footer";
 
+
+
 export default function Home() {
   return (
     <div className="relative w-full min-h-screen">
@@ -30,6 +32,7 @@ export default function Home() {
       <AboutMe />
       <Project />
       <Stacks />
+     
       <Footer />
     </div>
   );

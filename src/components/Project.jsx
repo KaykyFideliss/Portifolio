@@ -3,8 +3,9 @@ import { PiCertificateBold } from "react-icons/pi"; //certificate icon
 import { FaLink } from "react-icons/fa6"; //link icon
 import { GoArrowRight } from "react-icons/go"; //seta icon
 import { useState } from "react";//usestate
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import { Particles } from "./Particles";
+import ScrollAnimation from './ScrollAnimation';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("projects");
@@ -75,8 +76,8 @@ const Tabs = () => {
       demoUrl: "/funec-adventure",
       detailsUrl: "/funec-adventure",
     },
-   
-     {
+
+    {
       id: 7,
       title: "",
       description: "Desenvolvi uma calculadora simples para calcular o DAS com o objetivo de ajudar micro e pequenas empresas a entenderem melhor o Simples Nacional.",
@@ -94,95 +95,139 @@ const Tabs = () => {
 
   return (
     <section id="project" className="relative bg-white w-full min-h-screen overflow-hidden px-4 sm:px-6 lg:px-8 py-12">
-        {/* Particles de fundo */}
-  <Particles
-    className="absolute top-0 left-0 w-full h-full z-0 "
-    quantity={100}
-    color="#00ccff"
-    size={0.5}
-    staticity={50}
-    ease={50}
-  />
+      {/* Particles de fundo */}
+      <Particles
+        className="absolute top-0 left-0 w-full h-full z-0 "
+        quantity={100}
+        color="#00ccff"
+        size={0.5}
+        staticity={50}
+        ease={50}
+      />
       <div className="w-full z-10 " >
         {/* Título centralizado */}
         <div className="text-center mb-12 z-10">
-          <h2  className="text-5xl font-bold text-[#000000] font-syncopate">
+          <motion.h1
+            initial={{ opacity: 0, y: -25 }}   // começa invisível e um pouco pra baixo
+            whileInView={{ opacity: 1, y: 0 }} // aparece e sobe para o lugar
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ amount: 0.5 }}
+
+            className="text-5xl font-bold text-[#000000] font-syncopate">
             Meus projetos
-          </h2>
-          <p className="text-1xl text-black font-poppins p-2xl">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ amount: 0.5 }}
+            className="text-1xl text-black font-poppins p-2xl">
             Explore minha jornada por projetos, certificações e expertise técnica. Cada seção representa um marco na minha jornada de aprendizado contínuo.
-          </p>
+          </motion.p>
         </div>
 
         {/* Tabs */}
-        <div className="bg-black p-2 rounded-xl mb-12 max-w-6xl mx-auto ">
+        <motion.div
+           initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ amount: 0.5 }}
+
+          className="bg-black p-2 rounded-xl mb-12 max-w-6xl mx-auto ">
           <div className="flex items-center justify-around z-10">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex flex-col items-center justify-center w-40 py-4 rounded-xl font-semibold transition ${
-                  activeTab === tab.id
+                className={`flex flex-col items-center justify-center w-40 py-4 rounded-xl font-semibold transition ${activeTab === tab.id
                     ? "text-white bg-[#00aaff] shadow-md w-96"
                     : "text-gray-500 hover:text-black hover:bg-gray-200 w-96"
-                }`}
+                  }`}
               >
                 {tab.icon}
                 <span>{tab.label}</span>
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Conteúdo das tabs */}
         <div className="max-w-6xl mx-auto">
-          {/* Projects Tab */}
-          {activeTab === "projects" && (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => (
-                <div key={project.id} className="group relative rounded-2xl p-[1px] transition-all duration-500">
-                  <div className="rounded-2xl bg-[#0e0e0e] h-full flex flex-col transform group-hover:scale-105 transition-transform duration-300 shadow-black">
-                    <div className="p-4">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="rounded-xl w-full h-40 object-cover"
-                      />
-                    </div>
-                    <div className="flex flex-col flex-grow p-4">
-                      <h3 className="text-base font-bold text-white mb-2 font-syncopate">
-                        {project.title}
-                      </h3>
-                      <p className="text-xs text-white font-poppins flex-grow">
-                        {project.description}
-                      </p>
-                      <div className="flex justify-between items-center mt-4">
-                        <a
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#00ccff] text-sm font-poppins hover:underline flex items-center gap-1 "
-                        >
-                          Live Demo <FaLink />
-                        </a>
-                       <motion.a
+         {/* Projects Tab */}
+{activeTab === "projects" && (
+  <motion.div
+    className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+      initial="hidden"
+    whileInView="show" // continua animando no scroll
+    viewport={{ once: true, amount: 0.1, margin: "-50px" }} // dispara mais cedo no mobile
+    variants={{
+      hidden: {},
+      show: { transition: { staggerChildren: 0.15 } },
+    }}
+  >
+    {projects.map((project, index) => {
+      const col = index % 3; // coluna: 0=esq, 1=meio, 2=dir
 
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.95 }}
-                          onHoverStart={() => console.log('hover started!')}
+      // Variants para cada card
+     const cardVariants = {
+  hidden: {
+    opacity: 0,
+    x: 50, // todos começam deslocados para a direita
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: [0.25, 0.8, 0.25, 1] },
+  },
+};
 
-                          href={project.detailsUrl}
-                          className=" flex bg-[#00ccff] hover:bg-[#009dc4] text-sm text-white font-poppins px-4 py-2 rounded-lg transition"
-                        >
-                          Details <GoArrowRight className="pl-1" />
-                        </motion.a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+      return (
+        <motion.div
+          key={project.id}
+          variants={cardVariants}
+          className="group relative rounded-2xl p-[1px] will-change-transform"
+        >
+          <div className="rounded-2xl bg-[#0e0e0e] h-full flex flex-col transform group-hover:scale-105 transition-transform duration-300 shadow-black">
+            <div className="p-4">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="rounded-xl w-full h-40 object-cover"
+              />
             </div>
-          )}
+            <div className="flex flex-col flex-grow p-4">
+              <h3 className="text-base font-bold text-white mb-2 font-syncopate">
+                {project.title}
+              </h3>
+              <p className="text-xs text-white font-poppins flex-grow">
+                {project.description}
+              </p>
+              <div className="flex justify-between items-center mt-4">
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#00ccff] text-sm font-poppins hover:underline flex items-center gap-1"
+                >
+                  Live Demo <FaLink />
+                </a>
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={project.detailsUrl}
+                  className="flex bg-[#00ccff] hover:bg-[#009dc4] text-sm text-white font-poppins px-4 py-2 rounded-lg transition"
+                >
+                  Details <GoArrowRight className="pl-1" />
+                </motion.a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      );
+    })}
+  </motion.div>
+)}
+
 
           {/* Certificates Tab */}
           {activeTab === "certificates" && (

@@ -3,6 +3,7 @@ import { CardHoverEffect } from './CardHoverEffect'
 import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
 import { SiNextdotjs, SiTailwindcss, SiNodedotjs, SiTypescript,SiPhp , SiMysql } from "react-icons/si";
 import { FaBootstrap, FaPython,FaGitAlt,FaGithub   } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 
 const Stacks = () => {
@@ -75,12 +76,23 @@ const Stacks = () => {
     >
       <div className="w-full">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-[#FFFFff] font-syncopate">
+          <motion.h2
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ amount: 0.5 }}
+          
+          className="text-5xl font-bold text-[#FFFFff] font-syncopate">
             MINHAS STACKS
-          </h2>
-          <p className="text-zinc-400 mt-4 max-w-2xl mx-auto">
-            Tecnologias e ferramentas que utilizo para criar soluções incríveis
-          </p>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ amount: 0.5 }}
+           className="text-sm text-center text-gray-100 font-poppins p-2xl pb-10">
+            Cada stack apresentada é um marco na minha trajetória de aprendizado contínuo, representando não apenas ferramentas, mas experiências que moldaram minha visão sobre desenvolvimento e design.
+          </motion.p>
         </div>
         
         <CardHoverEffect items={stacks} />
