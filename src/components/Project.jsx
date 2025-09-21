@@ -68,29 +68,13 @@ const Tabs = () => {
       demoUrl: "/funec-adventure",
       detailsUrl: "/EcoAlert-page",
     },
-    {
-      id: 5,
-      title: "Calculadora Das",
-      description: "Desenvolvi uma calculadora simples para calcular o DAS com o objetivo de ajudar micro e pequenas empresas a entenderem melhor o Simples Nacional.",
-      image: "public/image/Das.png",
-      demoUrl: "/funec-adventure",
-      detailsUrl: "/funec-adventure",
-    },
-
-    {
-      id: 7,
-      title: "",
-      description: "Desenvolvi uma calculadora simples para calcular o DAS com o objetivo de ajudar micro e pequenas empresas a entenderem melhor o Simples Nacional.",
-      image: "public/image/Sistema-login.png",
-      demoUrl: "/funec-adventure",
-      detailsUrl: "/funec-adventure",
-    },
   ];
 
   const certificates = [
     "/image/certificated/Certificado-front.jpg",
     "/image/certificated/administrando-BD.jpg",
     "/image/certificated/certificado-python.jpg",
+    "/image/certificated//Intro-FullStack.jpg",
   ];
 
   return (
@@ -209,15 +193,15 @@ const Tabs = () => {
                   rel="noopener noreferrer"
                   className="text-[#00ccff] text-sm font-poppins hover:underline flex items-center gap-1"
                 >
-                  Live Demo <FaLink />
+                  GitHub <FaLink  />
                 </a>
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   href={project.detailsUrl}
-                  className="flex bg-[#00ccff] hover:bg-[#009dc4] text-sm text-white font-poppins px-4 py-2 rounded-lg transition"
+                  className="flex items-center bg-[#00ccff] hover:bg-[#009dc4] text-sm text-white font-poppins px-4 py-2 rounded-lg transition"
                 >
-                  Details <GoArrowRight className="pl-1" />
+                  Details <GoArrowRight className=" ml-2" />
                 </motion.a>
               </div>
             </div>
