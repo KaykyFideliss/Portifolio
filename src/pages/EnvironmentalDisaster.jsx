@@ -8,6 +8,9 @@ import { IoLogoCss3, IoMdClose } from "react-icons/io";
 import { FaHtml5, FaJs, FaBootstrap } from "react-icons/fa";
 import { SiScrollreveal } from "react-icons/si";
 // import Function from "../components/Function";
+import { FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa6";
+
 
 const ProjectDetail = () => {
   const [isOpen, setIsOpen] = useState(false); // <-- dentro do componente
@@ -39,23 +42,48 @@ const ProjectDetail = () => {
           <span className="font-poppins text-sm text-white whitespace-nowrap sm:text-sm">
             Environmenltal Disaster
           </span>
+       
         </nav>
 
         {/* Título e texto */}
         <div className="flex flex-col gap-6 text-center md:text-left">
+           <div className="flex justify-between"> 
           <h1 className="text-4xl font-bold text-white font-poppins">
             Environmenltal Disaster
-          </h1>
+             </h1>
+             <div className=" flex gap-3">
+               <motion.a 
+                whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+             target="_blank"
+             href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo">
+               <FaLink  className="w-8 h-8"/>
+                </motion.a>
+             <motion.a 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+             target="_blank"
+             
+             href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo">
+
+               <FaGithub  className="w-8 h-8 "/>
+                </motion.a>
+                </div>
+          </div>
+            
+      
+             
           <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
-            O projeto busca promover a conscientização sobre os impactos cada vez mais intensos e frequentes dos desastres naturais e ambientais. Além de destacar suas consequências imediatas — como destruição de infraestrutura, degradação ambiental e riscos à saúde pública — também incentiva práticas sustentáveis e estratégias de mitigação, capacitando indivíduos e comunidades a reduzir danos e contribuir para a recuperação dos ecossistemas.
+           O projeto Environmental Disaster tem como objetivo conscientizar sobre os impactos cada vez mais frequentes e intensos dos desastres naturais e ambientais. Além de abordar suas consequências imediatas — como destruição de infraestrutura, degradação ambiental e riscos à saúde pública —, o projeto também incentiva práticas sustentáveis e estratégias de mitigação, capacitando indivíduos e comunidades a reduzir danos e contribuir para a recuperação dos ecossistemas.
           </p>
            <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
-        Neste projeto fui responsável por grande parte do desenvolvimento. Entre as entregas, destaco a criação da página Home, desde o design no Figma até a implementação em código. <br />  Além disso, também contribuí em outras áreas, como:</p>
-           <ul className="flex gap-10 justify-center font-poppins list-disc">
-            <li>Quiz Game</li>
-            <li>Mapa</li>
-            <li>Sobre</li>
-            <li>Video-aula</li>
+        Neste projeto, fui responsável por grande parte do desenvolvimento, com foco na criação da página Home, desde o design no Figma até a implementação completa em código, utilizando HTML, CSS e Bootstrap para garantir responsividade e uma interface moderna.
+         Além disso, contribuí em outras áreas importantes do projeto, como:</p>
+           <ul className="item-center  m-4 gap-10 justify-center font-poppins list-disc">
+            <li>Quiz Game – Desenvolvimento interativo e estilizado com Bootstrap;</li>
+            <li>Mapa – Integração e estilização responsiva;</li>
+            <li>Sobre – Organização de conteúdo e design visual;</li>
+            <li>Video-aula – Implementação de player e layout responsivo.</li>
            </ul>
           
         </div>
@@ -205,7 +233,7 @@ const ProjectDetail = () => {
             </div>
           </div>
         </div>
-
+ 
 
 
       </div>

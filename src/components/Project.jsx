@@ -55,19 +55,19 @@ const Tabs = () => {
     {
       id: 3,
       title: "Acqualife",
-      description: "Aplicativo web para criar e gerenciar anotações rapidamente.",
+      description: "Acqualife é uma solução que integra hardware e software para monitoramento e gestão de água da chuva em residências de Contagem/MG",
       image: "/image/project-acqualife-photo.png",
       demoUrl: "#",
       detailsUrl: "/Acqualife-page",
     },
-    {
-      id: 4,
-      title: "EcoAlert",
-      description: "Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste",
-      image: "https://cdn1.gnarususercontent.com.br/1/906750/ca4a19d0-b044-4307-a2c2-e8adf65ad9d4.png",
-      demoUrl: "/funec-adventure",
-      detailsUrl: "/EcoAlert-page",
-    },
+    //{
+      //id: 4,
+      //title: "EcoAlert",
+      // description: "Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste",
+      //image: "https://cdn1.gnarususercontent.com.br/1/906750/ca4a19d0-b044-4307-a2c2-e8adf65ad9d4.png",
+      //demoUrl: "/funec-adventure",
+    //  detailsUrl: "/EcoAlert-page",
+    //},
   ];
 
   const certificates = [
@@ -75,6 +75,7 @@ const Tabs = () => {
     "/image/certificated/administrando-BD.jpg",
     "/image/certificated/certificado-python.jpg",
     "/image/certificated//Intro-FullStack.jpg",
+
   ];
 
   return (
