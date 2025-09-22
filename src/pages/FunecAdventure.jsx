@@ -1,24 +1,16 @@
 "use client"
 
-// React e hooks
 import { useState } from "react"
-
-// Componentes internos
 import { Particles } from "../components/Particles"
-
-// Bibliotecas de animação
 import { motion } from "framer-motion"
-
-// Ícones (organizados no final)
-import { SiGamemaker,SiAseprite  } from "react-icons/si";
+import { SiGamemaker, SiAseprite } from "react-icons/si"
 import { HiChevronRight } from "react-icons/hi2"
-
-import { FaGithub } from "react-icons/fa";
-import { FaLink } from "react-icons/fa6";
-// import Function from "../components/Function";
+import { FaGithub } from "react-icons/fa"
+import { FaLink } from "react-icons/fa6"
+import { IoMdClose } from "react-icons/io"  // <-- importante
 
 const ProjectDetail = () => {
-  const [isOpen, setIsOpen] = useState(false); // <-- dentro do componente
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-[#020202] text-white min-h-screen z-0">
@@ -52,29 +44,30 @@ const ProjectDetail = () => {
         {/* Título e texto */}
         <div className="flex flex-col gap-6 text-center md:text-left">
           <div className="flex justify-between"> 
-          <h1 className="text-4xl font-bold text-white font-poppins">
-            FUNEC RIACHO ADVENTURE
-             </h1>
-             <div className=" flex gap-3">
-               <motion.a 
+            <h1 className="text-4xl font-bold text-white font-poppins">
+              FUNEC RIACHO ADVENTURE
+            </h1>
+            <div className="flex gap-3">
+              <motion.a 
                 whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-             target="_blank"
-             href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo">
-               <FaLink  className="w-8 h-8"/>
-                </motion.a>
-             <motion.a 
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-             target="_blank"
-             
-             href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo">
-
-               <FaGithub  className="w-8 h-8 "/>
-                </motion.a>
-                </div>
+                whileTap={{ scale: 0.95 }}
+                target="_blank"
+                href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo"
+              >
+                <FaLink className="w-8 h-8"/>
+              </motion.a>
+              <motion.a 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                target="_blank"
+                href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo"
+              >
+                <FaGithub className="w-8 h-8"/>
+              </motion.a>
+            </div>
           </div>
 
+          
           <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
             O Funec Riacho Adventure é um jogo digital inovador que combina aprendizado e diversão. Desenvolvido especialmente para a Feira de Ciências da FUNEC Riacho, o projeto tem como objetivo engajar os estudantes em atividades lúdicas enquanto reforça conteúdos curriculares de maneira interativa e criativa.
           </p>
@@ -83,105 +76,80 @@ const ProjectDetail = () => {
           <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
             Durante o processo, aprendi a lidar com prazos, resolver bugs de forma criativa e transformar ideias em algo jogável e divertido. Essa experiência foi decisiva para despertar meu interesse pela área de desenvolvimento de software e pela possibilidade de criar soluções que unam tecnologia, educação e entretenimento.
           </p>
-
-
         </div>
 
         {/* Vídeo normal */}
-
         <div className="relative justify-center flex mt-10 z-auto">
-          {/* Vídeo normal */}
-          <div className="relative justify-center  flex mt-10 z-auto" >
-            <video
-              loop
-              autoPlay
-              muted
-              preload="auto"
-              playsInline
-              onClick={() => setIsOpen(true)}
-              className="rounded-xl shadow-lg w-full max-w-2xl cursor-pointer"
-            >
-              <source src="/video/Video-funec-adventure.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-            </video>
-
-          </div>
+          <video
+            loop
+            autoPlay
+            muted
+            preload="auto"
+            playsInline
+            onClick={() => setIsOpen(true)}
+            className="rounded-xl shadow-lg w-full max-w-2xl cursor-pointer"
+          >
+            <source src="/video/Video-funec-adventure.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo.
+          </video>
         </div>
 
         {/* Modal */}
-        <div className="relative z-auto">
-          {isOpen && (
-            <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-              <div className="relative w-full max-w-5xl">
-                {/* Botão fechar absoluto */}
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="absolute top-4 right-4 text-white text-3xl bg-[#070707] rounded-full p-1 opacity-70 z-50"
+        {isOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+            <div className="relative w-full max-w-5xl">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="absolute top-4 right-4 text-white text-3xl bg-[#070707] rounded-full p-1 opacity-70 z-50"
+              >
+                <IoMdClose />
+              </button>
+
+              <div className="rounded-xl shadow-lg w-full aspect-video">
+                <video
+                  loop
+                  autoPlay
+                  muted
+                  preload="auto"
+                  playsInline
+                  className="rounded-xl shadow-lg w-full"
                 >
-                  <IoMdClose />
-                </button>
-
-
-                {/* Vídeo expandido - REMOVI ISSO PORQUE ESTOU UTILIZANDO VIDEO DIRTETO DO YT  */}
-                <div className="rounded-xl shadow-lg w-full aspect-video">
-                  {/* Vídeo expandido */}
-                  <video
-                    loop
-                    autoPlay
-                    muted
-                    preload="auto"
-                    playsInline
-                    className="rounded-xl shadow-lg w-full"
-                  >
-                    <source src="/video/Video-funec-adventure.mp4" type="video/mp4" />
-                    Seu navegador não suporta vídeo.
-                  </video>
-                </div>
-
+                  <source src="/video/Video-funec-adventure.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeo.
+                </video>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
+
         {/* Stacks */}
-        <div className="mt-5">
-          <div className=" text-center  z-10 ">
-            <h2 className="text-3xl  text-white font-poppins text-center pt-10">
-              Stacks Utilizadas
-            </h2>
-            <p className="pb-10 text-xs font-poppins text-[#00aaff] opacity-90">- Front-end - </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2  gap-12 place-items-center">
-            <div className="flex flex-col items-center">
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                href="https://gamemaker.io/en"
-              >
-                <div className="flex justify-center">
-                  <SiGamemaker  className="text-[80px] mb-2 ml-3" />
-                </div>
-                <span className="font-poppins text-xl text-center ml-4 ">GameMaker</span>
-              </motion.a>
-            </div>
+        <div className="mt-5 text-center z-10">
+          <h2 className="text-3xl text-white font-poppins pt-10">Stacks Utilizadas</h2>
+          <p className="pb-10 text-xs font-poppins text-[#00aaff] opacity-90">- Front-end -</p>
 
-            <div className="flex flex-col items-center ">
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                href="https://www.w3.org/Style/CSS/Overview.en.html"
-                target="_blank"
-              >
-                <div className="flex justify-center">
-                  <SiAseprite className="text-[80px] mb-2 ml-3" />
-                </div>
-                <span className="font-poppins text-xl ml-5 ">Aseprite</span>
-              </motion.a>
-            </div>
+          <div className="grid grid-cols-2 gap-12 place-items-center">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://gamemaker.io/en"
+              className="flex flex-col items-center"
+            >
+              <SiGamemaker className="text-[80px] mb-2 ml-3"/>
+              <span className="font-poppins text-xl text-center ml-4">GameMaker</span>
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://www.w3.org/Style/CSS/Overview.en.html"
+              target="_blank"
+              className="flex flex-col items-center"
+            >
+              <SiAseprite className="text-[80px] mb-2 ml-3"/>
+              <span className="font-poppins text-xl ml-5">Aseprite</span>
+            </motion.a>
           </div>
         </div>
-
-
-
       </div>
     </div>
   )
