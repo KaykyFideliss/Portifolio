@@ -1,12 +1,11 @@
 import Header from "../components/Header";
- import Hero from "../components/Hero";
- import { Vortex } from "../components/Vortex";
- import AboutMe from "../components/AboutMe";
- import Project from "../components/Project";
- import Stacks from "../components/Stacks";
- import Footer from "../components/footer";
-
-
+import Hero from "../components/Hero";
+import { Vortex } from "../components/Vortex";
+import AboutMe from "../components/AboutMe";
+import Project from "../components/Project";
+import Stacks from "../components/Stacks";
+import Footer from "../components/footer";
+import CardFuncoes from "../components/CardFuncoes";
 
 export default function Home() {
   return (
@@ -31,8 +30,10 @@ export default function Home() {
       {/* Seções */}
       <AboutMe />
       <Project />
+<CardFuncoes />
+   
+
       <Stacks />
-     
       <Footer />
     </div>
   );

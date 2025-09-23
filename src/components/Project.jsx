@@ -41,7 +41,7 @@ const Tabs = () => {
       title: "Funec Riacho Adventure",
       description: "O Funec Riacho Adventure é um jogo digital inovador que combina aprendizado e diversão...",
       image: "/image/funec-adventure.png",
-      demoUrl: "",
+      demoUrl: "https://github.com/KaykyFideliss/Funec-Riacho-Adventure",
       detailsUrl: "/funec-adventure",
     },
     {
@@ -49,7 +49,7 @@ const Tabs = () => {
       title: "ENVIRONMENTAL DISASTER",
       description: "Automatiza mensagens em canais do Discord de forma agendada.",
       image: "/image/project-E.I-photo.png",
-      demoUrl: "#",
+      demoUrl: "https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo",
       detailsUrl: "/Environmental-Disaster",
     },
     {
@@ -57,7 +57,7 @@ const Tabs = () => {
       title: "Acqualife",
       description: "Acqualife é uma solução que integra hardware e software para monitoramento e gestão de água da chuva em residências de Contagem/MG",
       image: "/image/project-acqualife-photo.png",
-      demoUrl: "#",
+      demoUrl: "https://github.com/KaykyFideliss/Acqualife-app-android",
       detailsUrl: "/Acqualife-page",
     },
     //{

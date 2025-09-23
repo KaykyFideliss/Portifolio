@@ -48,14 +48,14 @@ const ProjectDetail = () => {
               FUNEC RIACHO ADVENTURE
             </h1>
             <div className="flex gap-3">
-              <motion.a 
+              {/* <motion.a 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 target="_blank"
                 href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo"
               >
                 <FaLink className="w-8 h-8"/>
-              </motion.a>
+              </motion.a> */}
               <motion.a 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}

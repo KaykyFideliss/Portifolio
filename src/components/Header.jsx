@@ -67,6 +67,16 @@ const Header = () => {
         >
           Projetos e certificados
         </a>
+        <a
+          className="text-base tracking-wider transition-colors hover:text-[#00aaff] font-poppins"
+          href="#Services"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("Services");
+          }}
+        >
+          Serviço Contratáveis
+        </a>
          <a
           className="text-base tracking-wider transition-colors hover:text-[#00aaff] font-poppins"
           href="#stacks"
@@ -108,7 +118,7 @@ const Header = () => {
       }}
       className="fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center bg-black text-xl z-50"
     >
-      {["home", "about", "project", "stacks"].map((section, index) => (
+    {["home", "about", "project", "Services", "stacks"].map((section, index) => (
         <motion.a
           key={section}
           href={`#${section}`}
@@ -123,14 +133,16 @@ const Header = () => {
             setOpen(false);
           }}
         >
-          {section === "home"
-            ? "Home"
-            : section === "about"
-            ? "Sobre"
-            : section === "project"
-            ? "Projetos e certificados"
-            : "Stacks"}
-        </motion.a>
+             {section === "home"
+      ? "Home"
+      : section === "about"
+      ? "Sobre"
+      : section === "project"
+      ? "Projetos e certificados"
+      : section === "Services"
+      ? "Serviços Contratáveis"
+      : "Stacks"}
+  </motion.a>
       ))}
     </motion.div>
   )}
