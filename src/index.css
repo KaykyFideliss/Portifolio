@@ -9,11 +9,29 @@
 
 @layer base {
   body {
-    @apply 
-    bg-black text-white relative font-sans h-screen overflow-x-hidden;
-    
-    
+    @apply bg-black text-white relative font-sans h-screen overflow-x-hidden;
+
+
+
   }
 
+  body::-webkit-scrollbar {
+    width: 7px;
+    /* width of the entire scrollbar */
+  }
+
+  body::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #00aaff;
+    /* color of the scroll thumb */
+    border-radius: 2px;
+    /* roundness of the scroll thumb */
+    border: #00aaff solid 5px;
+    /* creates padding around scroll thumb */
+  }
 
 }

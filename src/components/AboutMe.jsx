@@ -52,7 +52,7 @@ const AboutMe = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ amount: 0.5 }}
             className="text-lg leading-relaxed text-white font-poppins text-justify ">
-              Olá! Me chamo Kayky Fidelis, tenho 17 anos e atualmente estudo na
+              Tenho 17 anos e atualmente estudo na
               FUNEC Riacho, onde estou concluindo o último ano do curso Técnico
               em Informática integrado ao ensino médio. </motion.p>
               <motion.p

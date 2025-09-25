@@ -23,7 +23,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ amount: 1.0 }}
-        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-syncopate pt-3"> PORTIFÓLIO </motion.h1>
+        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-syncopate pt-3"> PORTFÓLIO </motion.h1>
 
         {/* Ícones de redes sociais */}
         <motion.div

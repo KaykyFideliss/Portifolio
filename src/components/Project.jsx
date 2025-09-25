@@ -47,7 +47,7 @@ const Tabs = () => {
     {
       id: 2,
       title: "ENVIRONMENTAL DISASTER",
-      description: "Automatiza mensagens em canais do Discord de forma agendada.",
+      description: "O projeto Environmental Disaster tem como objetivo conscientizar sobre os impactos cada vez mais frequentes e intensos dos desastres naturais e ambientais.",
       image: "/image/project-E.I-photo.png",
       demoUrl: "https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo",
       detailsUrl: "/Environmental-Disaster",
