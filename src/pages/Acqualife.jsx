@@ -255,7 +255,9 @@ const ProjectDetail = () => {
           <div className="flex justify-center items-center ">
   <video
     src="/video/acqualife.mp4"
-    
+    autoPlay
+    muted
+    playsInline
     loop
     className="rounded-lg "
     style={{ maxWidth: "100%", height: "auto" }}
