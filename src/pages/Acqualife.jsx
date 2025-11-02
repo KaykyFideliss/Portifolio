@@ -254,7 +254,7 @@ const ProjectDetail = () => {
 
           <div className="flex justify-center items-center ">
   <video
-    src="/video/acqualife.mp4"
+    src="/video/acqualife1.mp4"
     autoPlay
     muted
     playsInline
