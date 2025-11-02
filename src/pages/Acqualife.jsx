@@ -253,21 +253,21 @@ const ProjectDetail = () => {
           <p className="pb-10 text-xs font-poppins text-[#00aaff] opacity-90">- Front-end - </p>
 
           <div className="flex justify-center items-center ">
-            <video
+           <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="rounded-lg"
+  style={{ maxWidth: "100%", height: "auto" }}
+>
+  <source
+    src="https://res.cloudinary.com/de4ncki8u/video/upload/v1762101934/acqualife_1_vy4l5i.mp4"
+    type="video/mp4"
+  />
+  Seu navegador não suporta o vídeo em HTML5.
+</video>
 
-              autoPlay
-              muted
-              playsInline
-              loop
-              className="rounded-lg "
-              style={{ maxWidth: "100%", height: "auto" }}
-            >
-
-              <source src="/video/acqualife1.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-
-
-            </video>
           </div>
 
         </div>
