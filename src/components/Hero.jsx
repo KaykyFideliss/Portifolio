@@ -18,12 +18,15 @@ const Hero = () => {
              className="text-xs font-subtittle text(length:--font-size-hero-subtittle) md:text-lg font-syncopate pb-3 ">
               Opa! Bem-vindo ao meu 
              </motion.p>
-        <motion.h1 
-         initial={{ opacity: 0, y: -70 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            viewport={{ amount: 1.0 }}
-        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-syncopate pt-3"> PORTFÓLIO </motion.h1>
+      <motion.h1
+  initial={{ opacity: 0, y: -60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-syncopate pt-3"
+>
+  PORTFÓLIO
+</motion.h1>
+
 
         {/* Ícones de redes sociais */}
         <motion.div

@@ -43,7 +43,7 @@ const ProjectDetail = () => {
 
         {/* Título e texto */}
         <div className="flex flex-col gap-6 text-center md:text-left">
-          <div className="flex justify-between"> 
+          <div className="flex justify-between">
             <h1 className="text-4xl font-bold text-white font-poppins">
               FUNEC RIACHO ADVENTURE
             </h1>
@@ -56,18 +56,18 @@ const ProjectDetail = () => {
               >
                 <FaLink className="w-8 h-8"/>
               </motion.a> */}
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 target="_blank"
                 href="https://github.com/KaykyFideliss/Envirolmental-Disaster-Responsivo"
               >
-                <FaGithub className="w-8 h-8"/>
+                <FaGithub className="w-8 h-8" />
               </motion.a>
             </div>
           </div>
 
-          
+
           <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
             O Funec Riacho Adventure é um jogo digital inovador que combina aprendizado e diversão. Desenvolvido especialmente para a Feira de Ciências da FUNEC Riacho, o projeto tem como objetivo engajar os estudantes em atividades lúdicas enquanto reforça conteúdos curriculares de maneira interativa e criativa.
           </p>
@@ -81,16 +81,18 @@ const ProjectDetail = () => {
         {/* Vídeo normal */}
         <div className="relative justify-center flex mt-10 z-auto">
           <video
-            loop
             autoPlay
             muted
-            preload="auto"
+            loop
             playsInline
-            onClick={() => setIsOpen(true)}
-            className="rounded-xl shadow-lg w-full max-w-2xl cursor-pointer"
+            className="rounded-lg"
+            style={{ maxWidth: "100%", height: "auto" }}
           >
-            <source src="/video/Video-funec-adventure.mp4" type="video/mp4" />
-            Seu navegador não suporta vídeo.
+            <source
+              src="https://res.cloudinary.com/de4ncki8u/video/upload/v1762102296/Video-funec-adventure_zjccft.mp4"
+              type="video/mp4"
+            />
+            Seu navegador não suporta o vídeo.
           </video>
         </div>
 
@@ -134,7 +136,7 @@ const ProjectDetail = () => {
               href="https://gamemaker.io/en"
               className="flex flex-col items-center"
             >
-              <SiGamemaker className="text-[80px] mb-2 ml-3"/>
+              <SiGamemaker className="text-[80px] mb-2 ml-3" />
               <span className="font-poppins text-xl text-center ml-4">GameMaker</span>
             </motion.a>
 
@@ -145,7 +147,7 @@ const ProjectDetail = () => {
               target="_blank"
               className="flex flex-col items-center"
             >
-              <SiAseprite className="text-[80px] mb-2 ml-3"/>
+              <SiAseprite className="text-[80px] mb-2 ml-3" />
               <span className="font-poppins text-xl ml-5">Aseprite</span>
             </motion.a>
           </div>

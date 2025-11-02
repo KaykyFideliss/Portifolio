@@ -10,7 +10,7 @@ import { SiScrollreveal } from "react-icons/si";
 // import Function from "../components/Function";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
-
+import { MdWebAsset } from "react-icons/md";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 
@@ -62,15 +62,30 @@ const ProjectDetail = () => {
                 href="">
                 <FaLink className="w-8 h-8" />
               </motion.a> */}
+
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 target="_blank"
 
-                href="https://github.com/KaykyFideliss/Acqualife-app-android/tree/main">
+                href="https://acqualife.vercel.app">
+
+                <MdWebAsset className="w-8 h-8 " />
+                
+              </motion.a>
+
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                target="_blank"
+
+                href="https://github.com/KaykyFideliss/Website-Acqualife">
 
                 <FaGithub className="w-8 h-8 " />
+                
               </motion.a>
+               
+             
             </div>
           </div>
 
@@ -250,23 +265,23 @@ const ProjectDetail = () => {
           <h2 className="text-3xl  text-white font-poppins text-center mt-16 pt-10">
             VISAO GERAL DO PROJETO
           </h2>
-          <p className="pb-10 text-xs font-poppins text-[#00aaff] opacity-90">- Front-end - </p>
+          <p className="pb-10 text-xs font-poppins text-[#00aaff] opacity-90"> </p>
 
           <div className="flex justify-center items-center ">
-           <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="rounded-lg"
-  style={{ maxWidth: "100%", height: "auto" }}
->
-  <source
-    src="https://res.cloudinary.com/de4ncki8u/video/upload/v1762101934/acqualife_1_vy4l5i.mp4"
-    type="video/mp4"
-  />
-  Seu navegador não suporta o vídeo em HTML5.
-</video>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="rounded-lg"
+              style={{ maxWidth: "100%", height: "auto" }}
+            >
+              <source
+                src="https://res.cloudinary.com/de4ncki8u/video/upload/v1762101934/acqualife_1_vy4l5i.mp4"
+                type="video/mp4"
+              />
+              Seu navegador não suporta o vídeo.
+            </video>
 
           </div>
 

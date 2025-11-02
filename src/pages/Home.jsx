@@ -6,6 +6,7 @@ import Project from "../components/Project";
 import Stacks from "../components/Stacks";
 import Footer from "../components/footer";
 import CardFuncoes from "../components/CardFuncoes";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -30,10 +31,11 @@ export default function Home() {
       {/* Seções */}
       <AboutMe />
       <Project />
-<CardFuncoes />
-   
+      <CardFuncoes />
+
 
       <Stacks />
+      <Contact />
       <Footer />
     </div>
   );

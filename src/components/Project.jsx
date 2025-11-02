@@ -56,8 +56,8 @@ const Tabs = () => {
       id: 3,
       title: "Acqualife",
       description: "Acqualife é uma solução que integra hardware e software para monitoramento e gestão de água da chuva em residências de Contagem/MG",
-      image: "/image/project-acqualife-photo.png",
-      demoUrl: "https://github.com/KaykyFideliss/Acqualife-app-android",
+      image: "/image/Acqualife-em-desenvolvimento.png",
+      demoUrl: "https://github.com/KaykyFideliss/Website-Acqualife",
       detailsUrl: "/Acqualife-page",
     },
     //{
