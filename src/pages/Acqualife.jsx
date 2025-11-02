@@ -1,17 +1,17 @@
 "use client"
 import { HiChevronRight } from "react-icons/hi2"
-import { SiGamemaker, SiAseprite } from "react-icons/si"
+import { SiMysql } from "react-icons/si"
 import { motion } from "framer-motion"
 import { Particles } from "../components/Particles";
 import { useState } from "react"; // <-- Move para dentro
 import { IoLogoCss3, IoMdClose } from "react-icons/io";
-import { FaHtml5, FaJs, FaBootstrap } from "react-icons/fa";
+import { FaHtml5, FaJs, FaBootstrap ,FaReact, FaPhp} from "react-icons/fa";
 import { SiScrollreveal } from "react-icons/si";
 // import Function from "../components/Function";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 
-import { SiApachecordova } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 
 
@@ -76,11 +76,21 @@ const ProjectDetail = () => {
 
 
 
-          <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
-            Desenvolvi o App do projeto Acqualife, uma solução que integra hardware e software para monitoramento e gestão de água da chuva em residências de Contagem/MG. O sistema permite visualizar os reservatórios, acompanhar níveis de água e obter dados sobre consumo e reutilização para fins não potáveis (descarga, limpeza, irrigação).
+          <p className="text-gray-300 text-lg text-justify tracking-tight font-poppins leading-relaxed">
+            O Acqualife é um sistema web que desenvolvi utilizando React e Tailwind CSS, com o objetivo de monitorar e exibir informações de qualidade da água em tempo real.
+          
           </p>
-          <p className="text-gray-300 text-base text-justify tracking-tight font-poppins leading-relaxed">
-            Para o App, utilizei Cordova como framework para acelerar o desenvolvimento de um MVP, priorizando usabilidade, responsividade e integração com os sensores do sistema de captação.</p>
+          <p className="text-gray-300 text-lg text-justify tracking-tight font-poppins leading-relaxed">
+            O projeto conta com um dashboard dinâmico, onde os dados são obtidos diretamente do banco de dados MySQL, que recebe as informações enviadas por um Arduino responsável pela coleta dos dados físicos.
+          </p>
+          <p className="text-gray-300 text-lg text-justify tracking-tight font-poppins leading-relaxed">
+            Implementei também um sistema de login e autenticação, desenvolvido em PHP, permitindo que cada usuário acesse seu próprio painel personalizado e visualize apenas as informações do seu dispositivo.
+          </p>
+          <p className="text-gray-300 text-lg text-justify tracking-tight font-poppins leading-relaxed">
+            O Acqualife representa a integração completa entre frontend, backend, banco de dados e IoT, demonstrando minhas habilidades em React, Tailwind CSS, PHP, MySQL e comunicação entre hardware e web.
+          </p>
+
+
 
         </div>
 
@@ -150,26 +160,107 @@ const ProjectDetail = () => {
               </motion.a>
             </div>
           </div>
-        </div>
+         </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 place-items-center gap-1 mt-16 mx-10">
+
+
+            {/* REACT */}
+             <div className="flex flex-col items-center text-center">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://react.dev"
+                target="_blank"
+              >
+                <div className="flex justify-center">
+                  <FaReact className="text-[80px] mb-2 hover:text-blue-500" />
+                </div>
+                <span className="font-poppins text-xl">REACT</span>
+              </motion.a>
+            </div>
+
+            {/* TAILWIND */}
+            <div className="flex flex-col items-center text-center">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://tailwindcss.com"
+                target="_blank"
+              >
+                <div className="flex justify-center">
+                  <RiTailwindCssFill className="text-[80px] mb-2 hover:text-blue-500" />
+                </div>
+                <span className="font-poppins text-xl">TAILWIND CSS</span>
+              </motion.a>
+            </div>
+          </div>
+
 
         <div className="mt-5">
+            {/* Stacks */}
+        <div className="mt-5">
           <div className=" text-center  z-10 ">
-            <h2 className="text-2xl  pt-5 pb-10 text-white font-poppins text-center ">
-              Framework
+            <h2 className="text-3xl  text-white font-poppins text-center pt-10">
+              Stacks Utilizadas
             </h2>
+            <p className="pb-10 text-xs font-poppins text-[#00aaff] opacity-90">- Back end - </p>
           </div>
-          <div className="flex flex-col items-center">
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              href="https://html.spec.whatwg.org/multipage"
-            >
-              <div className="flex justify-center">
-                <SiApachecordova className="text-[80px] mb-2 hover:text-orange-600 items-center pl-2" />
-              </div>
-              <span className="font-poppins text-xl text-center ml-4 ">CORDOVA</span>
-            </motion.a>
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1  gap-12 place-items-center">
+
           </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 place-items-center gap-8">
+            {/* PHP */}
+            <div className="flex flex-col items-center text-center">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://getbootstrap.com"
+                target="_blank"
+              >
+                <div className="flex justify-center">
+                  <FaPhp className="text-[80px] mb-2 text-white hover:text-purple-600" />
+                </div>
+                <span className="font-poppins text-xl">PHP</span>
+              </motion.a>
+            </div>
+
+            {/* MYSLQ */}
+            <div className="flex flex-col items-center text-center">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://scrollrevealjs.org"
+                target="_blank"
+              >
+                <div className="flex justify-center ">
+                  <SiMysql  className="text-[80px] mb-2 hover:text-orange-500" />
+                </div>
+                <span className="font-poppins text-xl">MYSQL</span>
+              </motion.a>
+            </div>
+          </div>
+         </div>
+        
+
+        </div>
+
+        <div className=" text-center  z-10 ">
+          <h2 className="text-3xl  text-white font-poppins text-center mt-16 pt-10">
+            VISAO GERAL DO PROJETO
+          </h2>
+          <p className="pb-10 text-xs font-poppins text-[#00aaff] opacity-90">- Front-end - </p>
+
+          <div className="flex justify-center items-center ">
+  <video
+    src="/video/acqualife.mp4"
+    
+    loop
+    className="rounded-lg "
+    style={{ maxWidth: "100%", height: "auto" }}
+  />
+</div>
 
         </div>
 

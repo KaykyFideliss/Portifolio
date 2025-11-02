@@ -30,9 +30,9 @@ const AboutMe = () => {
             viewport={{ amount: 0.7 }} 
            className="flex-1 flex justify-center">
             <img
-              src="image/kayky.png"
+              src="image/img-kayky.jpg"
               alt="Foto de Kayky"
-               className="w-auto h-auto rounded-2xl shadow-xl lg:w-96 lg:h-96 object-cover"
+               className="w-96 h-auto rounded-2xl shadow-xl lg:w-96 lg:h-96 object-cover"
 />
                   </motion.div>
 
@@ -52,7 +52,7 @@ const AboutMe = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ amount: 0.5 }}
             className="text-lg leading-relaxed text-white font-poppins text-justify ">
-              Tenho 17 anos e atualmente estudo na
+              Tenho 18 anos e atualmente estudo na
               FUNEC Riacho, onde estou concluindo o último ano do curso Técnico
               em Informática integrado ao ensino médio. </motion.p>
               <motion.p
@@ -73,7 +73,7 @@ const AboutMe = () => {
             className="text-lg leading-relaxed text-white font-poppins text-justify pt-5">
               Estou dando meus primeiros passos tanto no Front-end quanto no
               Back-end, com o objetivo de me tornar um desenvolvedor Fullstack.
-              Já estudo linguagens como HTML, CSS, JavaScript, C++, Python e
+              Já estudo linguagens como HTML, CSS, JavaScript, React, Python e
               muitas outras tecnologias.
               </motion.p>
               <motion.p
