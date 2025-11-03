@@ -72,7 +72,7 @@ const Stacks = () => {
   return (
     <section
       id="stacks"
-      className="flex w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-transparent"
+      className="flex w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 bg-transparent"
     >
       <div className="w-full">
         <div className="text-center mb-12">

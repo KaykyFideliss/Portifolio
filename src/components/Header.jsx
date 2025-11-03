@@ -87,6 +87,16 @@ const Header = () => {
         >
          Minhas stacks
         </a>
+         <a
+          className="text-base tracking-wider transition-colors hover:text-[#00aaff] font-poppins"
+          href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("contact");
+          }}
+        >
+         Contato
+        </a>
         
       </div>
 
